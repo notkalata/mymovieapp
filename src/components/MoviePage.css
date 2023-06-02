@@ -1,0 +1,57 @@
+.movie-page{
+    padding: 2rem 4rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+.movie-container{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    border-bottom: 1px solid white;
+}
+
+.movie-about{
+    width: 70%;
+}
+
+.movie-cover{
+    width: 30%;
+}
+
+.movie-actions button{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    border: 1px solid white;
+    background-color: inherit;
+    color: white;
+    padding: .5rem 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.movie-actions button:hover{
+    background-color: white;
+    color: red;
+}
+
+.movie-cover span{
+    color: goldenrod;
+}
+
+@media screen and (max-width: 500px) {
+    .movie-page{
+        padding: .5rem;
+    }
+
+    .movie-about, .movie-cover{
+        width: 100%;
+    }
+
+    .movie-container{
+        display: block;
+        padding-bottom: 2rem;
+    }
+}
