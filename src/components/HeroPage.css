@@ -1,0 +1,109 @@
+.hero-landing{
+    padding: 8rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: .5rem solid var(--bg-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)), url(https://www.rollingstone.com/wp-content/uploads/2022/10/HorrorMovieList.jpg?w=1600&h=900&crop=1);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-landing h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}
+
+.hero-form{
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.hero-form input{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    padding: .5rem;
+    color: black;
+    width: 300px;
+    transition: outline var(--animation-reg);
+}
+
+.hero-form input:focus{
+    outline: 1px solid var(--main-color);
+}
+
+.hero-form button{
+    border: 1px solid var(--text-color);
+    background-color: inherit;
+    color: var(--text-color);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: background-color var(--animation-reg);
+}
+
+.hero-form button:hover{
+    background-color: var(--text-color);
+    color: var(--main-color);
+}
+
+/* Movie Poster Scroller */
+
+.movie-scroller{
+    display: flex;
+    padding: .5rem;
+    column-gap: 1rem;
+    overflow-x: auto;
+    background-color: #141414a4;
+}
+
+.movie-scroller::-webkit-scrollbar{
+    display: none;
+}
+
+.movie-scroller img{
+    transition: transform var(--animation-slow);
+    height: 400px;
+    object-fit: contain;
+}
+
+.movie-scroller img:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* - Movie Poster Scroller - */
+
+.category{
+    padding: 0 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+}
+
+.favourites{
+    background-color: #0f0f0f;
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .hero-landing{
+        padding: 6rem 2rem;
+    }
+
+    .hero-form{
+        display: block;
+    }
+
+    .hero-form input{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .category{
+        padding: .5rem;
+    }
+}

@@ -49,7 +49,7 @@ export default function MoviePage(){
                 </div>
             </div>
             <h2>People also search for:</h2>
-            <div className="container"> 
+            <div className="movie-scroller"> 
                 {recommended.map((rec) => {
                 if (rec.imdbID === movie.imdbID){
 

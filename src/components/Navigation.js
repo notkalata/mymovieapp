@@ -1,4 +1,5 @@
 import './Navigation.css';
+import { Link } from 'react-router-dom';
 
 export default function Navigation(){
     function toggleMenu(){
@@ -20,16 +21,13 @@ export default function Navigation(){
             </div>
             <ul className='nav'>
                 <li className='nav-item'>
-                    <a href='/trending'>Trending</a>
+                    <Link to='/movies'>Movies</Link>
                 </li>
                 <li className='nav-item'>
-                    <a href='/movies'>Movies</a>
+                    <Link to='/series'>Series</Link>
                 </li>
                 <li className='nav-item'>
-                    <a href='/series'>Series</a>
-                </li>
-                <li className='nav-item'>
-                    <a href='/signin'>Sign In</a>
+                    <Link to='/signin'>Sign In</Link>
                 </li>
             </ul>
         </div>

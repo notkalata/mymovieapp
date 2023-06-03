@@ -2,12 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(172, 71, 71);
+    background-color: var(--main-color);
     padding: .5rem 2rem;
+    color: var(--text-color);
 }
 
 .navigation h1{
     margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -38,7 +41,7 @@
 .nav-item{
     padding: 0 1rem;
     list-style-type: none;
-    transition: transform 250ms;
+    transition: transform var(--animation-reg);
 }
 
 .nav-item:hover{
@@ -47,16 +50,18 @@
 
 .nav-item a{
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     font-family: 'Oswald', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 1.25rem;
 }
 
 @media screen and (max-width: 500px) {
     .navigation{
-        padding: .5rem .5rem;
+        padding: 1rem;
     }
+
+    /* Can be changed to fixed so it moves with the scroll of the page */
 
     .mobile-menu{
         position: absolute;
@@ -76,6 +81,10 @@
         align-items: flex-start;
         row-gap: 3rem;
         display: none;
+    }
+
+    .nav-item a{
+        font-size: 1.5rem;
     }
 
     .menu-open{

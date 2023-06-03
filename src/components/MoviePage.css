@@ -1,5 +1,5 @@
 .movie-page{
-    padding: 2rem 4rem;
+    padding: .5rem 3rem;
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
     font-size: 1.5rem;
@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     gap: 4rem;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--text-color);
 }
 
 .movie-about{
@@ -23,18 +23,18 @@
 .movie-actions button{
     font-family: 'Oswald', sans-serif;
     font-size: 1.25rem;
-    border: 1px solid white;
+    border: 1px solid var(--text-color);
     background-color: inherit;
-    color: white;
+    color: var(--text-color);
     padding: .5rem 1rem;
     margin-right: 1rem;
     cursor: pointer;
-    transition: background-color 200ms;
+    transition: background-color var(--animation-reg);
 }
 
 .movie-actions button:hover{
-    background-color: white;
-    color: red;
+    background-color: var(--text-color);
+    color: var(--main-color);
 }
 
 .movie-cover span{
