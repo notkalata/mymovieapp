@@ -1,16 +1,17 @@
 import './HeroPage.css';
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
+import PosterCard from './PosterCard';
 
-export default function HeroPage(){
-    const[movies, setMovies] = useState([]);
+export default function HeroPage() {
+    const [movies, setMovies] = useState([]);
 
-    useEffect(()=>{
-      fetch('https://omdbapi.com/?apikey=3207aadb&s=Avengers')
-      .then((response) => response.json())
-      .then((data) => setMovies(data.Search));
+    useEffect(() => {
+        fetch('https://omdbapi.com/?apikey=3207aadb&s=Avengers')
+            .then((response) => response.json())
+            .then((data) => setMovies(data.Search));
     }, []);
 
-    return(
+    return (
         <div className="hero-page">
             <div className="hero-landing">
                 <h1>Subscribe to our newsletter and stay updated on movies.</h1>
@@ -21,23 +22,19 @@ export default function HeroPage(){
             </div>
             <div className='category'>
                 <h1>Upcoming</h1>
-                <div className='movie-scroller'>
+                <div className='poster-slider'>
                     {movies.map((movie) => {
-                        return <a href={`/details/${movie.imdbID}`}><img src={movie.Poster} alt={`${movie.Title} poster.`}></img></a>
+                        return <PosterCard imdbId={movie.imdbID} showTitle />
                     })}
                 </div>
             </div>
             <div className='category'>
                 <h1>Top Rated</h1>
-                <div className='movie-scroller'>
+                <div className='poster-slider'>
                     {movies.map((movie) => {
-                        return <a href={`/details/${movie.imdbID}`}><img src={movie.Poster} alt={`${movie.Title} poster.`}></img></a>
+                        return <PosterCard imdbId={movie.imdbID} showTitle showRating />
                     })}
                 </div>
-            </div>
-            <div className='favourites category'>
-                <h1>Favourites</h1>
-                <p>FAVOURITES ARE ONLY DISPLAYED WHEN YOU ARE LOGGED IN!</p>
             </div>
         </div>
     );

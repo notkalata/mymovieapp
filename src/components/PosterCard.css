@@ -1,0 +1,10 @@
+.poster-card img{
+    transition: border var(--animation-slow);
+    height: 400px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.poster-card img:hover{
+    transform: scale(1.01);
+}

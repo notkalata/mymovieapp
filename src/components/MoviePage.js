@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState} from "react";
 import './MoviePage.css';
+import PosterCard from "./PosterCard";
 
 export default function MoviePage(){
     let {id} = useParams();
@@ -49,14 +50,10 @@ export default function MoviePage(){
                 </div>
             </div>
             <h2>People also search for:</h2>
-            <div className="movie-scroller"> 
+            <div className="poster-slider"> 
                 {recommended.map((rec) => {
-                if (rec.imdbID === movie.imdbID){
-
-                } else {
-                    return <div className='movie'>
-                        <a href={`/details/${rec.imdbID}`}><img src={rec.Poster} alt="Movie poster" /></a>
-                    </div>
+                if (rec.imdbID !== movie.imdbID){
+                    return <PosterCard imdbId={rec.imdbID} showTitle />
                 }
                 })}
             </div>
