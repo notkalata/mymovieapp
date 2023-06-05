@@ -8,3 +8,7 @@
 .poster-card img:hover{
     transform: scale(1.01);
 }
+
+.big img{
+    height: 500px;
+}
