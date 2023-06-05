@@ -18,35 +18,10 @@ body{
 
 /* Movies & Series page styles */
 
-.slider-wrapper{
-    position: relative;
-}
-
 .slider{
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    max-width: 100%;
-}
-
-.slider-nav{
-    position: absolute;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.slider-nav button{
-    border: none;
-    background-color: white;
-    padding: .35rem;
-    border-radius: .35rem;
-    margin: 0 .5rem;
-    cursor: pointer;
-}
-
-.slider-nav button:focus{
-    outline: .25rem solid var(--main-color);
 }
 
 .slider::-webkit-scrollbar{
@@ -69,16 +44,6 @@ body{
     align-items: center;
 }
 
-.slider-text iframe{
-    margin-top: 1.5rem;
-    width: 90%;
-    aspect-ratio: 16/9;
-}
-
-.display-cover h1, .display-about h3{
-    margin: 0;
-}
-
 .display-cover h3 span{
     color: goldenrod;
 }
@@ -93,6 +58,12 @@ body{
     font-weight: 300;
     text-transform: uppercase;
     width: 40%;
+}
+
+.display-about img{
+    margin-top: 1.5rem;
+    width: 70%;
+    object-fit: center;
 }
 
 .display-about h3{

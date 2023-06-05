@@ -23,7 +23,7 @@ export default function PosterCard({imdbId, showTitle, showRating, series}){
 
     return(
         <div className='poster-card'>
-            <a href={`/details/${imdbId}`}><img src={data.poster} alt={`${data.title} + poster.`} /></a>
+            <a href={series ? `/series/${imdbId}` : `/movies/${imdbId}`}><img src={data.poster} alt={`${data.title} + poster.`} /></a>
             {showTitle ? <p>{data.title} {showRating ? <span>{data.imdbRating}<i className='fa-regular fa-star'></i></span> : ""}</p> : ""}
         </div>
     );

@@ -1,5 +1,4 @@
-import './MoviesPage.css'
-import MovieSlider from './MovieSlider';
+import Slider from './Slider';
 import { useEffect, useState } from "react";
 import PosterCard from './PosterCard';
 
@@ -14,19 +13,11 @@ export default function MoviesPage() {
 
     return (
         <div className="movies-page">
-            <div className='slider-wrapper'>
-                <div className='slider'>
-                    <MovieSlider imdbId="tt7286456" />
-                    <MovieSlider imdbId="tt0468569" />
-                    <MovieSlider imdbId="tt10151854" />
-                    <MovieSlider imdbId="tt10403420" />
-                </div>
-                <div className='slider-nav'>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                </div>
+            <div className='slider'>
+                <Slider imdbId="tt7286456" />
+                <Slider imdbId="tt0468569" />
+                <Slider imdbId="tt10151854" />
+                <Slider imdbId="tt10403420" />
             </div>
             <div className='category'>
                 <h1>Recently added</h1>
@@ -41,14 +32,6 @@ export default function MoviesPage() {
                 <div className='poster-slider big'>
                     {movies.map((movie) => {
                         return <PosterCard imdbId={movie.imdbId} showTitle showRating />
-                    })}
-                </div>
-            </div>
-            <div className='category'>
-                <h1>Love is in the air</h1>
-                <div className='poster-slider'>
-                    {movies.map((movie) => {
-                        return <PosterCard imdbId={movie.imdbId} />
                     })}
                 </div>
             </div>

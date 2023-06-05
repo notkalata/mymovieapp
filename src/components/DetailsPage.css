@@ -40,3 +40,24 @@
 .details-cover span{
     color: goldenrod;
 }
+
+.episodes-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.episode-display{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+}
+
+.episode-display h3{
+    margin: 0;
+}
+
+.episode-display img{
+    width: 40%;
+}
